@@ -30,7 +30,7 @@ class ProductController extends Controller
     public function update(StoreProductRequest $request, Product $product)
     {
         $product->update($request->validated());
-        return $product;
+        return response()->json($product);
     }
 
     /**
